@@ -1,19 +1,33 @@
 const mainDiv = document.getElementById('main');
+const exploreDiv = document.createElement('div');
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM content loaded');
+  closedExplore();
   closedDetails();
 });
 
+function closedExplore() {
+
+  exploreDiv.setAttribute('class', 'container');
+  exploreDiv.innerHTML = '<h1 class="explore">Explore</h1>';
+
+  mainDiv.append(exploreDiv);
+}
+
 function closedDetails() {
-  console.log('closed details func called');
+  const moreDetails = document.createElement('div');
+  moreDetails.setAttribute('class', 'more-details');
 
-  const welcomeDiv = document.createElement('div');
-  welcomeDiv.setAttribute('class', 'container');
-  welcomeDiv.innerHTML = '<h1 class="explore">Explore</h1>';
+  const iconSpan = document.createElement('span');
+  iconSpan.setAttribute('class', 'iconSpan');
+  iconSpan.innerHTML = '<i class="fas fa-plus-circle"></i>';
 
-  console.log(welcomeDiv);
-  console.log(mainDiv);
+  const iconText = document.createElement('p');
+  iconText.setAttribute('class', 'iconText');
+  iconText.innerText = 'More Details';
 
-  mainDiv.append(welcomeDiv);
+  iconSpan.append(iconText);
+  moreDetails.append(iconSpan);
+  mainDiv.append(moreDetails);
 }
