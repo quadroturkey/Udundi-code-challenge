@@ -1,0 +1,30 @@
+body {
+  background-image: url("./johannes-plenio-RwHv7LgeC7s-unsplash.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed;
+  background-color: maroon;
+}
+
+.rectangle {
+  height: 100vw;
+  width: 23vw;
+  background-color: #611818
+}
+
+.container {
+  position: absolute;
+  color: white;
+  margin-bottom: auto;
+  z-index: 200;
+  top: 50%;
+  left: 10%;
+}
+
+.explore {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 10vw;
+  font-weight: bolder;
+}
+
+     
