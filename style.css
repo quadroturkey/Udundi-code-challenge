@@ -3,54 +3,41 @@ body {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-attachment: fixed;
-  background-color: maroon;
 }
 
 .rectangle {
+  position: absolute;
   height: 100vh;
   width: 25vw;
   background-color: #611818
 }
 
-.container {
-  position: absolute;
-  color: white;
-  margin-bottom: auto;
-  top: 50%;
-  left: 3.5vw;
-}
-
-.explore {
+.explore-text {
   font-family: serif;
-  font-size: 17vw;
-  font-weight: bolder;
-  letter-spacing: .4vw;
-}
-
-.more-details {
   position: absolute;
-  bottom: 20vh;
-  left: 7vw;
-}
-
-.iconSpan {
-  position: relative;
   color: white;
-  font-size: 2vw;
-  top: 2vh;
+  bottom: 10vh;
+  margin-left: 4vw;
+  font-size: 18vw;
+  letter-spacing: 2px;
 }
 
-.iconText {
-  position: relative;
-  float: right;
-  margin-left: 1vw;
+.moreBtn {
+  position: absolute;
+  bottom: 10vh;
+  margin-left: 15vw;
 }
 
+.card {
+  position: absolute;
+  bottom: -30vh;
+  left: 15vw;
+}
 
+.show {
+  display: block;
+}
 
-
-
-
-
-
-     
+.hide {
+  display: none;
+}
