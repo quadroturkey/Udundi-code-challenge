@@ -20,24 +20,135 @@ body {
   margin-left: 4vw;
   font-size: 18vw;
   letter-spacing: 2px;
+  animation: fadeInLeft 0.7s;
 }
 
 .moreBtn {
   position: absolute;
-  bottom: 10vh;
+  bottom: 15vh;
   margin-left: 15vw;
+  color: white;
+  cursor: pointer;
+  font-family: arial;
+  font-size: 1vw;
 }
 
 .card {
   position: absolute;
-  bottom: -30vh;
+  bottom: -20vh;
   left: 15vw;
+  padding-top: 60px;
 }
+
+.card-title {
+  color: #611818;
+  font-family: arial;
+}
+
+h2 {
+  font-family: serif !important;
+  margin-left: 30px;
+  padding-bottom: 3px;
+  display: inline;
+  text-decoration: none;
+  background-image: linear-gradient(transparent, transparent),linear-gradient(transparent, transparent),linear-gradient(to right, #611818, white);
+  background-repeat: no-repeat;
+  background-position: 120%, 122%, 0 130%;
+  background-size: 100% 10px;
+}
+
+.card-text {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 10px;
+  text-align: justify;
+}
+
+.btnBox {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+
+.btn {
+  width: 235px;
+  height: 55px;
+}
+
+.btnText {
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
+.fa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: #611818;
+}
+
+button {
+  padding-bottom: 50px;
+  background-image: linear-gradient(to right, #611818, #61181884);
+}
+
+.card-closed {
+  position: absolute;
+  animation: popup 0.3s;
+}
+
+.card-opened {
+  position: absolute;
+  animation: close 0.3s;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(.3);
+    border-radius: 0%;
+  }
+  100% {
+    transform-origin: bottom left;
+    transform: scale(1);
+    border-radius: 100%;
+  }
+}
+
+@keyframes close {
+  0%{
+    transform-origin: top left;
+    transform: scale(1);
+    border-radius: 100%;    
+  }
+  100%{
+    transform-origin: bottom left;
+    transform: scale(.3);
+    border-radius: 0%;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+     opacity: 0;
+     transform: translateX(-20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}   
 
 .show {
   display: block;
-}
+} 
 
 .hide {
   display: none;
+} 
+
+.close-icon {
+  cursor: pointer;
 }
