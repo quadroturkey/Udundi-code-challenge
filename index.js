@@ -6,7 +6,6 @@ $('i').click(() => {
     $('#alternate').toggle();
     open = !open;
   } else {
-    console.log('second part running, toggling all 3 divs');
     $('#main').toggle();
     $('#alternate').toggle();
     $('#third').toggle();
