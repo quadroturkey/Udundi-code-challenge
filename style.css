@@ -24,8 +24,12 @@ body {
 
 .moreBtn {
   position: absolute;
-  bottom: 10vh;
+  bottom: 15vh;
   margin-left: 15vw;
+  color: white;
+  cursor: pointer;
+  font-family: arial;
+  font-size: 1vw;
 }
 
 .card {
@@ -34,10 +38,36 @@ body {
   left: 15vw;
 }
 
+.card-closed {
+  position: relative;
+  animation: popup 0.3s;
+}
+
+.card-opened {
+  position: relative;
+  animation: popup reverse 0.3s;
+}
+
+@keyframes popup {
+  0% {
+    transform-origin: bottom left;
+    transform: scale(.3);
+    border-radius: 100%;
+  }
+  100% {
+    transform-origin: bottom left;
+    transform: scale(1);
+  }
+}
+
 .show {
   display: block;
 }
 
 .hide {
   display: none;
+}
+
+.close-icon {
+  cursor: pointer;
 }
