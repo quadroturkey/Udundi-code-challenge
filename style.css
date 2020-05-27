@@ -39,13 +39,13 @@ body {
 }
 
 .card-closed {
-  position: relative;
+  position: absolute;
   animation: popup 0.3s;
 }
 
 .card-opened {
-  position: relative;
-  animation: popup reverse 0.3s;
+  position: absolute;
+  animation: close 0.3s;
 }
 
 @keyframes popup {
@@ -60,13 +60,25 @@ body {
   }
 }
 
+@keyframes close {
+  0%{
+    transform-origin: bottom left;
+    transform: scale(1);
+  }
+  100%{
+    transform-origin: bottom left;
+    transform: scale(.3);
+    border-radius: 100%;    
+  }
+}
+
 .show {
   display: block;
-}
+} 
 
 .hide {
   display: none;
-}
+} 
 
 .close-icon {
   cursor: pointer;

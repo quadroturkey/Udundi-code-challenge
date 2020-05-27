@@ -1,19 +1,16 @@
 let open = false;
 
-function toggleEverything() {
-  $('#main').toggle();
-  $('#alternate').toggle();
-  open = !open;
-}
-
 $('i').click(() => {
   if (open === false) {
-    $('#card-status').removeClass('card-opened');
-    $('#card-status').addClass('card-closed');
-    toggleEverything();
+    $('#main').toggle();
+    $('#alternate').toggle();
+    open = !open;
   } else {
-    $('#card-status').removeClass('card-closed');
-    $('#card-status').addClass('card-opened');
-    toggleEverything();
+    console.log('second part running, toggling all 3 divs');
+    $('#main').toggle();
+    $('#alternate').toggle();
+    $('#third').toggle();
+    setTimeout(() => { $('#third').toggle(); }, 300);
+    open = !open;
   }
 });
